@@ -1158,7 +1158,7 @@ footer p {
 }
 
 .watermark-wrapper::after {
-  content: "بصمة ديزاين";
+  content: "بصمة";
   position: absolute;
   top: 50%;
   left: 50%;

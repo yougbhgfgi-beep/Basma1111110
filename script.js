@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <span class="lightbox-close">&times;</span>
       <div class="lightbox-img-container" style="position: relative; max-width: 90%; max-height: 90vh; display: flex; justify-content: center; align-items: center;">
         <img class="lightbox-content" src="" style="max-height: 90vh; max-width: 100%; border-radius: 12px; border: 2px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-        <div class="watermark-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-30deg); font-size: 3.5rem; font-weight: bold; color: rgba(255,255,255,0.4); text-shadow: 2px 2px 5px rgba(0,0,0,0.8); pointer-events: none; user-select: none; white-space: nowrap;">بصمة ديزاين</div>
+        <div class="watermark-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-30deg); font-size: 3.5rem; font-weight: bold; color: rgba(255,255,255,0.4); text-shadow: 2px 2px 5px rgba(0,0,0,0.8); pointer-events: none; user-select: none; white-space: nowrap;">بصمة</div>
       </div>
     `;
     document.body.appendChild(lightbox);
@@ -335,7 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
             item.innerHTML = `
               <img src="${data.url}" class="thumbnail-img" style="width:100%; height:100%; object-fit:cover;">
               <div class="thumbnail-watermark">بصمة</div>
-              <div class="gallery-caption">${data.caption || 'بصمة ديزاين'}</div>
+              <div class="gallery-caption">${data.caption || 'بصمة'}</div>
               ${isAdmin ? `<button class="admin-inline-delete" data-id="${data.id}" title="حذف هذه الصورة"><i class="fas fa-trash-alt"></i></button>` : ''}
             `;
             
@@ -398,7 +398,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (localImgs.length > 0) {
           container.innerHTML = '';
           Array.from(localImgs).forEach(img => {
-             const data = { url: img.getAttribute('src'), caption: img.alt || 'بصمة ديزاين' };
+             const data = { url: img.getAttribute('src'), caption: img.alt || 'بصمة' };
              const item = document.createElement('div');
              
              if (section === 'certificates') {
@@ -504,7 +504,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (data.admin_reply) {
           adminReplyHtml = `
             <div class="admin-reply-card" style="margin-top: 1rem; background: rgba(212, 175, 55, 0.05); padding: 1.2rem; border-radius: 12px; border-right: 3px solid var(--accent-gold);">
-              <span class="admin-tag" style="color: var(--accent-gold); font-weight: bold; font-size: 0.85rem; display: block; margin-bottom: 5px;">رد بصمة ديزاين <i class="fas fa-check-circle"></i></span>
+              <span class="admin-tag" style="color: var(--accent-gold); font-weight: bold; font-size: 0.85rem; display: block; margin-bottom: 5px;">رد بصمة <i class="fas fa-check-circle"></i></span>
               <p class="comment-text" style="font-size: 0.95rem; margin: 0;">${data.admin_reply}</p>
             </div>
           `;
